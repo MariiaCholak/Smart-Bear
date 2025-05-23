@@ -5,7 +5,8 @@
   "scripts": {
     "test": "npx cypress run",
     "test:smoke": "npx cypress run --env grep='@Smoke'",
-    "test:regression": "npx cypress run --env grep='@Regression'"
+    "test:regression": "npx cypress run --env grep='@Regression'",
+    "report": "npx mochawesome-merge mochawesome-report/*.json | npx marge --reportDir mochawesome-report --inline"
   },
   "keywords": [],
   "author": "SmartBear",
@@ -17,6 +18,8 @@
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
     "cypress": "^14.4.0",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
