@@ -11,7 +11,7 @@ module.exports = defineConfig({
     },
      reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    reportDir: 'cypress/reports/mochawesome', 
+    reportDir: 'cypress/reports/', 
     charts: true,
     reportPageTitle: 'SmartBear App Test Report',
     embeddedScreenshots: true,
