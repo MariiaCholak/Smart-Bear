@@ -14,18 +14,18 @@ describe("Login Verification", () => {
   it("TG11S-T131 - Validate login with valid credentials", () => {
     cy.visit(Cypress.env("APP_BASE_URL"));
 
-    loginPage.login(Cypress.env("Test_USERNAME"), Cypress.env("PASSWORD"));
+    loginPage.login(Cypress.env("TEST_USERNAME"), Cypress.env("PASSWORD"));
 
     cy.url().should("include", "weborders");
 
     basePage.getWebOrdersHeading().should("have.text", "Web Orders");
     basePage.getLogoutButton().should("have.text", "Logout");
-    basePage.getWelcomeUserInfo().should("include.text", Cypress.env("Test_USERNAME"));
+    basePage.getWelcomeUserInfo().should("include.text", Cypress.env("TEST_USERNAME"));
   });
 
   it("TG11S-T142 - Validate logout", () => {
     cy.visit(Cypress.env("APP_BASE_URL"));
-    loginPage.login(Cypress.env("Test_USERNAME"), Cypress.env("PASSWORD"));
+    loginPage.login(Cypress.env("TEST_USERNAME"), Cypress.env("PASSWORD"));
     basePage.getLogoutButton().click();
     cy.url().should("include", "Login");
     loginPage.getLoginForm().should("be.visible");
@@ -44,7 +44,7 @@ describe("Login Verification", () => {
     },
     {
       title: 'invalidUsernameValidPassword',
-      username: Cypress.env("Test_USERNAME"),
+      username: Cypress.env("TEST_USERNAME"),
       password: "InvalidPassword",
     },
     {
@@ -73,7 +73,7 @@ describe('Login Verification - Additional Tests @Smoke', () => {
 
 
     it('TG11S-T168 - Validate login with valid credentials and ENTER', () => {
-    loginPage.login(Cypress.env("Test_USERNAME"), Cypress.env("PASSWORD"), false);
+    loginPage.login(Cypress.env("TEST_USERNAME"), Cypress.env("PASSWORD"), false);
 
     cy.url().should("include", "weborders");
 
@@ -81,7 +81,7 @@ describe('Login Verification - Additional Tests @Smoke', () => {
     basePage.getLogoutButton().should("have.text", "Logout");
     basePage
       .getWelcomeUserInfo()
-      .should("include.text", Cypress.env("Test_USERNAME"));
+      .should("include.text", Cypress.env("TEST_USERNAME"));
   });
 })
 

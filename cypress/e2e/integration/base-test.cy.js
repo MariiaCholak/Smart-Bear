@@ -6,7 +6,7 @@ describe('Base Test @Smoke', () => {
   const basePage = new BasePage();
 
   it('TG11S-T183 - Validate main content after login', () => {
-    loginPage.login(Cypress.env("Test_USERNAME"), Cypress.env("PASSWORD"));
+    loginPage.login(Cypress.env("TEST_USERNAME"), Cypress.env("PASSWORD"));
 
     const leftPanelOptions = ["View all orders", "View all products", "Order"];
     const rightPanelHeadings = ["List of All Orders", "List of Products", "Order"];

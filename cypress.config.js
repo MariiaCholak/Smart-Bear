@@ -6,7 +6,7 @@ module.exports = defineConfig({
   viewportWidth: 1920,
    env: {
     APP_BASE_URL: process.env.APP_BASE_URL,
-    Test_USERNAME: process.env.Test_USERNAME,
+    TEST_USERNAME: process.env.TEST_USERNAME,
     PASSWORD: process.env.PASSWORD
     },
      reporter: 'cypress-mochawesome-reporter',

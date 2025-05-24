@@ -11,7 +11,7 @@ describe("List of products Verification @Regression", () => {
   const listOfProductsPage = new ListOfProductsPage()
 
   beforeEach(() => {
-    loginPage.login(Cypress.env("Test_USERNAME"), Cypress.env("PASSWORD"));
+    loginPage.login(Cypress.env("TEST_USERNAME"), Cypress.env("PASSWORD"));
     listOfProductsPage.clickOnLeftPanelOption('View all products')
   });
 

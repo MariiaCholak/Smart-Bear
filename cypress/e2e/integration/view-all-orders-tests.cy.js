@@ -9,7 +9,7 @@ describe("View All Orders Verification @Regression", () => {
   const viewAllOrdersPage = new ViewAllOrdersPage();
 
   beforeEach(() => {
-    loginPage.login(Cypress.env("Test_USERNAME"), Cypress.env("PASSWORD"));
+    loginPage.login(Cypress.env("TEST_USERNAME"), Cypress.env("PASSWORD"));
   });
 
   it('TG11S - T123 Validate "View All Orders" table', () => {
