@@ -12,14 +12,13 @@
   "author": "SmartBear",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "dotenv": "^16.5.0"
-  },
+    
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
     "cypress": "^14.4.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "mochawesome-merge": "^5.0.0",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.2.0",
+    "dotenv": "^16.5.0"
   }
 }
