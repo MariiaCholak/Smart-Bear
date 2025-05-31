@@ -4,8 +4,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-  schedule:
-    - cron: '0 10 */14 * 4'
+  # schedule:
+  #   - cron: '0 10 */14 * 4'
 
 jobs:
   cypress-run:
